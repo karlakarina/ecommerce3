@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductsTable extends Migration
+class CreateShoppingCartsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,13 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('shopping_carts',function(Blueprint $table){
+            $table->increments("id");
+            $table->string('status');
+            $table->timestamps();
+
+
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('shopping_carts');
     }
 }

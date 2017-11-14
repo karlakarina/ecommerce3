@@ -138,6 +138,7 @@ return [
 
     'providers' => [
 
+
         /*
          * Laravel Framework Service Providers...
          */
@@ -173,6 +174,8 @@ return [
          * Application Service Providers...
          */
         Collective\Html\HtmlServiceProvider::class,
+        App\Providers\ShoppingCartProvider::class,
+
 
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
